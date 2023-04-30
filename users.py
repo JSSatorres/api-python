@@ -25,3 +25,11 @@ async def user(id:int):
         return list(users)[0]
     except:
         return "no existe el usuario"
+    
+@app.get("/api/users/name/{name}")
+async def name(name:str):
+    users = filter(lambda user: user.name == name, users_list)
+    try:
+        return list(users)[0]
+    except:
+        return "no existe el usuario"
