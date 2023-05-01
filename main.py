@@ -10,3 +10,7 @@ async def root():
 @app.get("/url")
 async def root():
     return {"url": "http/miDick"}
+
+@app.get("/")
+async def root():
+    return {"url": "http/miDick"}
